@@ -82,10 +82,10 @@
 - Add list of comments to `article.blade.php`
 
     ```html
-    {{ /* if an article has comments list them */ }}
+    {{-- if an article has comments list them --}}
     @if($article->comments->isNotEmpty())
       <div class="list-group">
-        @foreach ($comments as $comment)
+        @foreach ($article->comments as $comment)
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ $comment->email }}</h5>
           </div>
